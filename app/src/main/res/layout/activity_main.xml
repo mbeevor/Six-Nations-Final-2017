@@ -1,18 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="uk.co.beevorwhite.sixnationsfinal2017.MainActivity">
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/logo"
+        style="@style/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rbs_nations" />
 
     <TextView
+        android:id="@+id/event"
+        style="@style/event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/logo"
+        android:text="@string/app_name" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/england_rugby_crest" />
+
+            <TextView
+                style="@style/teamName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/teamA" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                style="@style/score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamATry"
+                android:text="Try" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamAConversion"
+                android:text="Conversion" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamAPenalty"
+                android:text="Penalty" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamADropGoal"
+                android:text="Drop Goal" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/ireland_rugby_white" />
+
+            <TextView
+                style="@style/teamName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/teamB" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                style="@style/score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamBTry"
+                android:text="Try" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamBConversion"
+                android:text="Conversion" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamBPenalty"
+                android:text="Penalty" />
+
+            <Button
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="teamBDropGoal"
+                android:text="Drop Goal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="Reset"
+        android:text="Reset" />
+
+
+</RelativeLayout>
