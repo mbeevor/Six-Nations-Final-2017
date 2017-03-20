@@ -11,7 +11,7 @@
     <style name="logo">
        <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_margin">10dp</item>
     </style>
 
     <style name="event">
@@ -30,16 +30,22 @@
         <item name="android:layout_margin">8dp</item>
     </style>
 
-    <style name="score">
+    <style name="counter">
         <item name="android:fontFamily">serif</item>
         <item name="android:textSize">50sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
     </style>
 
     <style name="button">
         <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+    </style>
+
+    <style name="buttonLast">
+        <item name="android:layout_marginBottom">100dp</item>
         <item name="android:layout_marginLeft">24dp</item>
         <item name="android:layout_marginRight">24dp</item>
     </style>
