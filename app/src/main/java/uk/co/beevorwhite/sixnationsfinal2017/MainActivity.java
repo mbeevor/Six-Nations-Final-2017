@@ -10,6 +10,8 @@ import static uk.co.beevorwhite.sixnationsfinal2017.R.id.team_b_score;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView scoreViewA;
+    TextView scoreViewB;
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
@@ -18,14 +20,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        scoreViewA = (TextView) findViewById(team_a_score);
+        scoreViewB = (TextView) findViewById(team_b_score);
     }
 
     /**
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(team_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewA.setText(String.valueOf(score));
     }
 
 
@@ -54,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(team_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewB.setText(String.valueOf(score));
     }
 
 

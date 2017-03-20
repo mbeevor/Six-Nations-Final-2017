@@ -2,5 +2,5 @@
     <string name="app_name">Six Nations Final 2017</string>
     <string name="teamA">England</string>
     <string name="teamB">Ireland</string>
-
+    <string name="Zero">0</string>
 </resources>

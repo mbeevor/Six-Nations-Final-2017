@@ -43,7 +43,7 @@
                 style="@style/counter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@string/Zero" />
 
             <Button
                 style="@style/button"
@@ -106,7 +106,7 @@
                 style="@style/counter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@string/Zero" />
 
             <Button
                 style="@style/button"

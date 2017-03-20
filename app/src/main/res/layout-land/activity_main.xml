@@ -24,6 +24,13 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/team_a_score"
+                style="@style/counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Zero" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -37,12 +44,6 @@
                 android:layout_weight="1"
                 android:text="@string/teamA" />
 
-            <TextView
-                android:id="@+id/team_a_score"
-                style="@style/counter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0" />
 
         </LinearLayout>
 
@@ -95,6 +96,13 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/team_b_score"
+                style="@style/counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Zero" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -107,13 +115,6 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="@string/teamB" />
-
-            <TextView
-                android:id="@+id/team_b_score"
-                style="@style/counter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0" />
 
 
         </LinearLayout>
@@ -161,8 +162,8 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:layout_margin="22dp"
         android:onClick="Reset"
         android:text="Reset" />
