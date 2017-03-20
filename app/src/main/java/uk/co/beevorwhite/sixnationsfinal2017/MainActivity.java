@@ -24,11 +24,34 @@ public class MainActivity extends AppCompatActivity {
         scoreViewB = (TextView) findViewById(team_b_score);
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("scoreA", scoreTeamA);
+        savedInstanceState.putInt("scoreB", scoreTeamB);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        int scoreA = savedInstanceState.getInt("scoreA");
+        int scoreB = savedInstanceState.getInt("scoreB");
+
+        TextView scoreViewA = (TextView) findViewById(team_a_score);
+        scoreViewA.setText(String.valueOf(scoreA));
+        scoreTeamA = scoreA;
+
+        TextView scoreViewB = (TextView) findViewById(team_b_score);
+        scoreViewB.setText(String.valueOf(scoreB));
+        scoreTeamB = scoreB;
+
+    }
     /**
      * Displays the given score for Team A.
      */
-    public void displayForTeamA(int score) {
-        scoreViewA.setText(String.valueOf(score));
+    public void displayForTeamA(int scoreA) {
+        scoreViewA.setText(String.valueOf(scoreA));
     }
 
 
@@ -56,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team B.
      */
-    public void displayForTeamB(int score) {
-        scoreViewB.setText(String.valueOf(score));
+    public void displayForTeamB(int scoreB) {
+        scoreViewB.setText(String.valueOf(scoreB));
     }
 
 
