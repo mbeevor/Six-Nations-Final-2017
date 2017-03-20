@@ -6,17 +6,16 @@
     <ImageView
         android:id="@+id/logo"
         style="@style/logo"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rbs_nations" />
-
 
     <LinearLayout
         android:id="@+id/score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -45,6 +44,15 @@
                 android:layout_height="wrap_content"
                 android:text="0" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
             <Button
                 style="@style/button"
                 android:layout_width="match_parent"
@@ -72,7 +80,6 @@
                 android:layout_height="wrap_content"
                 android:onClick="teamADropGoal"
                 android:text="Drop Goal" />
-
 
         </LinearLayout>
 
@@ -107,6 +114,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <Button
                 style="@style/button"
@@ -145,9 +161,9 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="22dp"
         android:onClick="Reset"
         android:text="Reset" />
 
