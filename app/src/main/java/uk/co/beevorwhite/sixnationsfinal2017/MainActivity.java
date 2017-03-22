@@ -4,11 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
-import static uk.co.beevorwhite.sixnationsfinal2017.R.id.name_team_a;
-import static uk.co.beevorwhite.sixnationsfinal2017.R.id.name_team_b;
 import static uk.co.beevorwhite.sixnationsfinal2017.R.id.team_a_score;
 import static uk.co.beevorwhite.sixnationsfinal2017.R.id.team_b_score;
 
@@ -16,8 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView scoreViewA;
     TextView scoreViewB;
-    TextView nameTeamA;
-    TextView nameTeamB;
+
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
@@ -29,18 +26,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         scoreViewA = (TextView) findViewById(team_a_score);
         scoreViewB = (TextView) findViewById(team_b_score);
-        nameTeamA = (TextView) findViewById(name_team_a);
-        nameTeamB = (TextView) findViewById(name_team_b);
+
         // Get a reference to the AutoCompleteTextView in the layout
-        AutoCompleteTextView textViewA = (AutoCompleteTextView) findViewById(R.id.name_team_a);
-        AutoCompleteTextView textViewB = (AutoCompleteTextView) findViewById(R.id.name_team_b);
+        Spinner spinner1 = (Spinner) findViewById(R.id.name_team_a);
+        Spinner spinner2 = (Spinner) findViewById(R.id.name_team_b);
         // Get the string array
         String[] teamName = getResources().getStringArray(R.array.teams);
         // Create the adapter and set it to the AutoCompleteTextView
-        ArrayAdapter<String> adapter = new
-                ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, teamName);
-        textViewA.setAdapter(adapter);
-        textViewB.setAdapter(adapter);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.teams, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
     }
 
     @Override
@@ -129,9 +125,6 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
         scoreTeamA = 0;
         displayForTeamA(scoreTeamA);
-
-        nameTeamA.setText(R.string.team_name);
-        nameTeamB.setText(R.string.team_name);
     }
 
 }

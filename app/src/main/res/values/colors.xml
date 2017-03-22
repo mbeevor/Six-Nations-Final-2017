@@ -3,4 +3,5 @@
     <color name="colorPrimary">#00326a</color>
     <color name="colorPrimaryDark">#22608E</color>
     <color name="colorAccent">#FFFFFF</color>
+    <color name="my_spinner_text_color">#ffffff</color>
 </resources>
