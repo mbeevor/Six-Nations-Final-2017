@@ -32,6 +32,7 @@
                 android:text="@string/Zero" />
 
             <ImageView
+                android:id="@+id/logo_team_a"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="2"
@@ -104,6 +105,7 @@
                 android:text="@string/Zero" />
 
             <ImageView
+                android:id="@+id/logo_team_b"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="2"

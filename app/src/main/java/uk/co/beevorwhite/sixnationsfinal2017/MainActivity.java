@@ -1,12 +1,17 @@
 package uk.co.beevorwhite.sixnationsfinal2017;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import static uk.co.beevorwhite.sixnationsfinal2017.R.id.name_team_a;
+import static uk.co.beevorwhite.sixnationsfinal2017.R.id.name_team_b;
 import static uk.co.beevorwhite.sixnationsfinal2017.R.id.team_a_score;
 import static uk.co.beevorwhite.sixnationsfinal2017.R.id.team_b_score;
 
@@ -27,16 +32,46 @@ public class MainActivity extends AppCompatActivity {
         scoreViewA = (TextView) findViewById(team_a_score);
         scoreViewB = (TextView) findViewById(team_b_score);
 
-        // Get a reference to the AutoCompleteTextView in the layout
-        Spinner spinner1 = (Spinner) findViewById(R.id.name_team_a);
-        Spinner spinner2 = (Spinner) findViewById(R.id.name_team_b);
-        // Get the string array
-        String[] teamName = getResources().getStringArray(R.array.teams);
-        // Create the adapter and set it to the AutoCompleteTextView
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.teams, android.R.layout.simple_spinner_item);
+        final Spinner spinner1 = (Spinner) findViewById(name_team_a);
+        final Spinner spinner2 = (Spinner) findViewById(name_team_b);
+
+        String[] teamName = getResources().getStringArray(R.array.country);
+        final TypedArray images = getResources().obtainTypedArray(R.array.team_logo);
+        final ImageView itemImage1 = (ImageView)findViewById(R.id.logo_team_a);
+        final ImageView itemImage2 = (ImageView)findViewById(R.id.logo_team_b);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.country, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter);
         spinner2.setAdapter(adapter);
+
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                itemImage1.setImageResource(images.getResourceId(spinner1.getSelectedItemPosition(), -1));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                itemImage2.setImageResource(images.getResourceId(spinner2.getSelectedItemPosition(), -1));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
     }
 
     @Override

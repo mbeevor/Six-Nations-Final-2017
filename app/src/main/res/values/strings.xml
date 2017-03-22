@@ -4,7 +4,7 @@
     <string name="teamB">Ireland</string>
     <string name="Zero">0</string>
     <string name="team_name">Enter Team Name</string>
-    <string-array name="teams">
+    <string-array name="country">
         <item>Click to select</item>
         <item>England</item>
         <item>France</item>
@@ -13,4 +13,14 @@
         <item>Scotland</item>
         <item>Wales</item>
     </string-array>
+
+    <integer-array name="team_logo">
+        <item>@drawable/world_rugby</item>
+        <item>@drawable/england_rugby_crest</item>
+        <item>@drawable/france</item>
+        <item>@drawable/ireland_rugby_white</item>
+        <item>@drawable/italy</item>
+        <item>@drawable/scotland</item>
+        <item>@drawable/wales</item>
+    </integer-array>
 </resources>
