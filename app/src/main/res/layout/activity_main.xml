@@ -141,15 +141,13 @@
 
     </LinearLayout>
 
-    <Button
+    <ImageView
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:onClick="Reset"
-        android:text="Reset" />
+        style="@style/reset_portrait"
+        android:src="@drawable/rugby_reset"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="Reset" />
 
 
 </RelativeLayout>
