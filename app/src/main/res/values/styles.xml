@@ -17,6 +17,35 @@
        <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="landscape_score">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:orientation">horizontal"</item>
+    </style>
+
+    <style name="portrait_score">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:orientation">horizontal"</item>
+    </style>
+
+    <style name="team_scoreboard_layout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="team_logo" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">2</item>
     </style>
 
     <style name="event">
@@ -27,12 +56,22 @@
         <item name="android:layout_margin">6dp</item>
     </style>
 
-    <style name="teamName">
+    <style name="team_name">
         <item name="android:fontFamily">serif</item>
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="divider_line" >
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
     <style name="counter">
@@ -41,12 +80,18 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="button">
+        <item name="android:background">@drawable/score_button</item>
         <item name="android:layout_marginBottom">6dp</item>
         <item name="android:layout_marginLeft">18dp</item>
         <item name="android:layout_marginRight">18dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="reset_portrait">
@@ -54,12 +99,16 @@
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
     </style>
 
     <style name="reset_landscape">
         <item name="android:layout_alignParentEnd">true</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_margin">22dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
     </style>
 
 </resources>
