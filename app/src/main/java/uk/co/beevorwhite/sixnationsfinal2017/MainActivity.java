@@ -156,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
         scoreTeamA = 0;
         displayForTeamA(scoreTeamA);
-        itemImage1.setImageResource(R.drawable.world_rugby);
-        itemImage2.setImageResource(R.drawable.world_rugby);
+        spinner1.setSelection(0);
+        spinner2.setSelection(0);
     }
 
 }
