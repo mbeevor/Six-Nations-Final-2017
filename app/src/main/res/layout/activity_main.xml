@@ -10,6 +10,7 @@
 
     <LinearLayout
         android:id="@+id/score"
+        android:orientation="horizontal"
         style="@style/portrait_score"
         android:layout_below="@id/logo" >
 

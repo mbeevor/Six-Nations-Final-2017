@@ -11,6 +11,7 @@
     <LinearLayout
         android:id="@+id/score"
         style="@style/landscape_score"
+        android:orientation="horizontal"
         android:layout_below="@id/logo" >
 
         <LinearLayout

@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
         scoreTeamA = 0;
         displayForTeamA(scoreTeamA);
+
     }
 
 }

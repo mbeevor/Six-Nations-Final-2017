@@ -14,7 +14,7 @@
     </style>
 
     <style name="logo">
-       <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_width">match_parent</item>
@@ -25,14 +25,12 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">10dp</item>
-        <item name="android:orientation">horizontal"</item>
     </style>
 
     <style name="portrait_score">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">80dp</item>
-        <item name="android:orientation">horizontal"</item>
     </style>
 
     <style name="team_scoreboard_layout">
@@ -42,7 +40,7 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="team_logo" >
+    <style name="team_logo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">2</item>
@@ -67,7 +65,7 @@
         <item name="android:layout_weight">1</item>
     </style>
 
-    <style name="divider_line" >
+    <style name="divider_line">
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">10dp</item>

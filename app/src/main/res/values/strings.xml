@@ -3,13 +3,12 @@
     <string name="teamA">England</string>
     <string name="teamB">Ireland</string>
     <string name="Zero">0</string>
-    <string name="team_name">Enter Team Name</string>
     <string name="button_1">Try</string>
     <string name="button_2">Conversion</string>
     <string name="button_3">Penalty</string>
     <string name="button_4">Drop Goal</string>
     <string-array name="country">
-        <item>Click to select</item>
+        <item>Select team</item>
         <item>England</item>
         <item>France</item>
         <item>Ireland</item>
