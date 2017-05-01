@@ -1,6 +1,3 @@
-# Six-Nations-Final-2017
-EU Scholarship - Android Basics Nanodegree - Score Counter App
-
 Score Keeper
 Layout
 Criteria
