@@ -11,11 +11,10 @@
     <LinearLayout
         android:id="@+id/score"
         style="@style/landscape_score"
-        android:orientation="horizontal"
-        android:layout_below="@id/logo" >
+        android:layout_below="@id/logo"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            style="@style/team_scoreboard_layout">
+        <LinearLayout style="@style/team_scoreboard_layout">
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -34,8 +33,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/team_scoreboard_layout" >
+        <LinearLayout style="@style/team_scoreboard_layout">
 
 
             <Button
@@ -60,11 +58,9 @@
 
         </LinearLayout>
 
-        <View
-            style="@style/divider_line"    />
+        <View style="@style/divider_line" />
 
-        <LinearLayout
-            style="@style/team_scoreboard_layout" >
+        <LinearLayout style="@style/team_scoreboard_layout">
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -83,8 +79,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/team_scoreboard_layout" >
+        <LinearLayout style="@style/team_scoreboard_layout">
 
             <Button
                 style="@style/button"
@@ -114,8 +109,8 @@
     <ImageView
         android:id="@+id/reset"
         style="@style/reset_landscape"
-        android:src="@drawable/rugby_reset"
-        android:onClick="Reset" />
+        android:onClick="Reset"
+        android:src="@drawable/rugby_reset" />
 
 
 </RelativeLayout>

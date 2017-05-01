@@ -19,32 +19,37 @@ public class MainActivity extends AppCompatActivity {
 
     TextView scoreViewA;
     TextView scoreViewB;
-
+    Spinner spinner1;
+    Spinner spinner2;
+    ImageView itemImage1;
+    ImageView itemImage2;
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Find views by id
         scoreViewA = (TextView) findViewById(team_a_score);
         scoreViewB = (TextView) findViewById(team_b_score);
+        spinner1 = (Spinner) findViewById(name_team_a);
+        spinner2 = (Spinner) findViewById(name_team_b);
+        itemImage1 = (ImageView) findViewById(R.id.logo_team_a);
+        itemImage2 = (ImageView) findViewById(R.id.logo_team_b);
 
-        final Spinner spinner1 = (Spinner) findViewById(name_team_a);
-        final Spinner spinner2 = (Spinner) findViewById(name_team_b);
-
-        String[] teamName = getResources().getStringArray(R.array.country);
+        // Array of team crests
         final TypedArray images = getResources().obtainTypedArray(R.array.team_logo);
-        final ImageView itemImage1 = (ImageView)findViewById(R.id.logo_team_a);
-        final ImageView itemImage2 = (ImageView)findViewById(R.id.logo_team_b);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.country, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-        spinner2.setAdapter(adapter);
+        // Array of team names
+        ArrayAdapter<CharSequence> teamName = ArrayAdapter.createFromResource(this, R.array.country, android.R.layout.simple_spinner_item);
+        teamName.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(teamName);
+        spinner2.setAdapter(teamName);
 
+        // spinner for selecting first team
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -59,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //spinner for selecting second team
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // saved instance state when device is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -81,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("scoreB", scoreTeamB);
     }
 
+    // restore saved instance state when device is rotated
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -88,19 +96,11 @@ public class MainActivity extends AppCompatActivity {
         int scoreA = savedInstanceState.getInt("scoreA");
         int scoreB = savedInstanceState.getInt("scoreB");
 
-        TextView scoreViewA = (TextView) findViewById(team_a_score);
         scoreViewA.setText(String.valueOf(scoreA));
-        scoreTeamA = scoreA;
-
-        TextView scoreViewB = (TextView) findViewById(team_b_score);
         scoreViewB.setText(String.valueOf(scoreB));
-        scoreTeamB = scoreB;
-
     }
 
-    /**
-     * Displays the given score for Team A.
-     */
+    // Displays the given score for Team A.
     public void displayForTeamA(int scoreA) {
         scoreViewA.setText(String.valueOf(scoreA));
     }
@@ -125,9 +125,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
-    /**
-     * Displays the given score for Team B.
-     */
+    // Displays the given score for Team B.
     public void displayForTeamB(int scoreB) {
         scoreViewB.setText(String.valueOf(scoreB));
     }
@@ -152,15 +150,14 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    /**
-     * This method is called when the RESET button is clicked.
-     */
+    // This method is called when the RESET button is clicked. All scores are reset to zero
     public void Reset(View view) {
         scoreTeamB = 0;
         displayForTeamB(scoreTeamB);
         scoreTeamA = 0;
         displayForTeamA(scoreTeamA);
-
+        itemImage1.setImageResource(R.drawable.world_rugby);
+        itemImage2.setImageResource(R.drawable.world_rugby);
     }
 
 }

@@ -16,7 +16,7 @@
     <style name="logo">
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_margin">@dimen/layout_margin</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -24,13 +24,13 @@
     <style name="landscape_score">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginBottom">@dimen/layout_margin</item>
     </style>
 
     <style name="portrait_score">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:layout_marginBottom">@dimen/layout_margin_bottom_score</item>
     </style>
 
     <style name="team_scoreboard_layout">
@@ -44,14 +44,6 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">2</item>
-    </style>
-
-    <style name="event">
-        <item name="android:fontFamily">serif</item>
-        <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_margin">6dp</item>
     </style>
 
     <style name="team_name">
@@ -68,7 +60,7 @@
     <style name="divider_line">
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginTop">@dimen/layout_margin</item>
         <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
@@ -77,16 +69,16 @@
         <item name="android:textSize">50sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginBottom">@dimen/layout_margin</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="button">
         <item name="android:background">@drawable/score_button</item>
-        <item name="android:layout_marginBottom">6dp</item>
-        <item name="android:layout_marginLeft">18dp</item>
-        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:layout_marginBottom">@dimen/layout_margin_bottom_button</item>
+        <item name="android:layout_marginLeft">@dimen/layout_margin_side_button</item>
+        <item name="android:layout_marginRight">@dimen/layout_margin_side_button</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -95,8 +87,7 @@
     <style name="reset_portrait">
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginBottom">20dp</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_margin">@dimen/layout_margin_reset</item>
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
     </style>
@@ -104,7 +95,7 @@
     <style name="reset_landscape">
         <item name="android:layout_alignParentEnd">true</item>
         <item name="android:layout_alignParentTop">true</item>
-        <item name="android:layout_margin">22dp</item>
+        <item name="android:layout_margin">@dimen/layout_margin_reset</item>
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
     </style>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="layout_margin_reset">20dp</dimen>
+    <dimen name="layout_margin_bottom_score">80dp</dimen>
+    <dimen name="layout_margin_bottom_button">6dp</dimen>
+    <dimen name="layout_margin_side_button">18dp</dimen>
+
+</resources>

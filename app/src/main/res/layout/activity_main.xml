@@ -10,12 +10,11 @@
 
     <LinearLayout
         android:id="@+id/score"
-        android:orientation="horizontal"
         style="@style/portrait_score"
-        android:layout_below="@id/logo" >
+        android:layout_below="@id/logo"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            style="@style/team_scoreboard_layout" >
+        <LinearLayout style="@style/team_scoreboard_layout">
 
             <ImageView
                 android:id="@+id/logo_team_a"
@@ -54,11 +53,9 @@
 
         </LinearLayout>
 
-        <View
-            style="@style/divider_line"    />
+        <View style="@style/divider_line" />
 
-        <LinearLayout
-            style="@style/team_scoreboard_layout" >
+        <LinearLayout style="@style/team_scoreboard_layout">
 
             <ImageView
                 android:id="@+id/logo_team_b"
@@ -102,8 +99,8 @@
     <ImageView
         android:id="@+id/reset"
         style="@style/reset_portrait"
-        android:src="@drawable/rugby_reset"
-        android:onClick="Reset" />
+        android:onClick="Reset"
+        android:src="@drawable/rugby_reset" />
 
 
 </RelativeLayout>
